@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Latihan Array</h2>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+
+<script>
+// Buat variable dengan tipe data array yang berisi 5 value string
+// Nama variable harus mudah di mengerti awam
+var motor = ['Mio','supra','jupiter','satria','vario']
+console.log(motor);
+
+// Buat variable dengan tipe data array yang berisi 4 value string
+// Nama variable harus mudah di mengerti awam
+var mobil = ['avanza','xenia','brio','jazz']
+console.log(mobil);
+
+// - Buat sebuah variable dengan tipe data array yang berisi 5 value string
+// - Nama variable harus mudah di mengerti awam
+// - Tampilkan seluruh value dari variable poin ke - 1 seperti contoh dibawah : 
+// Hasil yang diharapkan : 1, 2, 3, 4, 5
+var author = ['Budi', 'Agung', 'Gatot', 'Adam', 'Meli']
+document.getElementById("demo").innerHTML= author.join (", ");
+console.log(author);
+
+// - Buat sebuah variable dengan tipe data array yang berisi 5 value string
+// - Nama variable harus mudah di mengerti awam
+// - Tampilkan seluruh value dari variable poin ke - 1 seperti contoh dibawah : 
+// Hasil yang diharapkan : 1 dan 2 dan 3 dan 4 dan 5
+var rubrik = ['Olahraga', 'Lifestyle', 'Politik', 'Selebriti', 'Hiburan'];
+	console.log(rubrik.join(' dan ')); 
+document.getElementById("demo1").innerHTML = rubrik.join (" dan ");
+
+// - Buat sebuah variable dengan tipe data array yang berisi 5 value string
+// - Nama variable harus mudah di mengerti awam
+// - Tampilkan seluruh value dari variable poin ke - 1
+// - Gunakan for
+// Hasil yang diharapkan : 
+// <p>1</p>
+// <p>2</p>
+// <p>3</p>
+// <p>4</p>
+// <p>5</p>
+var programTv = ['Karma', 'Family100', 'Pesbuker', 'Nah Ini Dia', 'Planet Remaja']
+for (i=0; i<5; i++){
+	document.write("Program TV ke "+[i+1]+" adalah" + " " + programTv[i] + "<br>");
+console.log('Program TV ke-' + [i+1] + " " + 'adalah' + " " + programTv[i]);
+}
+
+// - Buat sebuah variable dengan tipe data array yang berisi 5 value string
+// - Nama variable harus mudah di mengerti awam
+// - Tampilkan seluruh value dari variable poin ke - 1
+// - Gunakan for
+// Hasil yang diharapkan : 
+// <p>Gatot</p>
+// <span>Ganteng</span>
+// <h2>Banget</h2>
+// <h1>Sih</h1>
+// <h3>Ya Ampun</h3>
+var beritaPopuler = ["Drama", "Kriminalitas", "Pemerkosaan", "Wanita", "Setengah Baya"];
+	text = "<div>";
+	for (i = 0; i < 1; i++){
+		text += "<p>" + beritaPopuler[0] + "</p>";
+		text += "<span>" + beritaPopuler[1] + "</span>";
+		text += "<h2>" + beritaPopuler[2] + "</h2>";
+		text += "<h1>" + beritaPopuler[3] + "</h1>";
+		text += "<h3>" + beritaPopuler[4] + "</h3>";
+	}
+	text += "</div>";
+	document.write(text);
+	console.log(beritaPopuler);
+
+
+// - Buat sebuah variable dengan tipe data array yang berisi 5 value string
+// - Nama variable harus mudah di mengerti awam
+// - Tampilkan value dari variable poin ke 1 index ke 0
+// - Tampilkan value dari variable poin ke 1 index yang tengah (klo 5, berart tengahnya adalah ?)
+// - Tampilkan value dari variable poin ke 1 index ke 4
+//
+// Contoh :
+// var x = ["Gatot", "Ganteng", "Banget", "Sih", "Ya Ampun"];
+//
+// Hasil yang diharapkan : Gatot
+// Hasil yang diharapkan : Banget
+// Hasil yang diharapkan : Ya Ampun
+var artis = ["Ashraf Sinclair", "Uya Kuya", "Julia Perez", "Ayu Tingting", "Olga"]
+document.write(artis [0] + "<br>");
+document.write(artis [2] + "<br>");
+document.write(artis [4] + "<br>");
+console.log(artis);
+document.write('<br>');
+
+// - Buat sebuah variable dengan tipe data array yang berisi 10 value integer
+// - Nama variable harus mudah di mengerti awam
+// - Buat sebuah variable dengan tipe data integer yang berisi total dari 10 value integer tersebut
+// - Nama variable harus mudah di mengerti awam
+// - Tampilkan value dari variable poin 3
+// Contoh : var x = [1,2,3];
+// Hasil yang diharapkan : 6
+var newsRate = [4,11,6,9,8,2,7,14,5,3];
+newsRate.splice(3,7);
+function myFunction(newsRate) {
+	var sum = 0;
+	for (var i = 0 ; i<3; i++){
+		sum = sum + newsRate[i]
+	}
+	return sum;
+}
+document.write(newsRate);
+document.write('<br>');
+document.write(myFunction(newsRate));
+console.log(newsRate);
+console.log(myFunction(newsRate));
+document.write('<br>');
+
+
+// - Buat sebuah variable dengan tipe data array yang berisi 5 value integer
+// - Nama variable harus mudah di mengerti awam
+// - Buat sebuah variable dengan tipe data integer yang berisi penambahan dari index ke 2 dan ke 3
+// = Tampilkan value dari variable di poin 3
+// Contoh : var x = [1,2,3,4];
+// Hasil yang diharapkan = 7;
+var totalAsset = [6,5,12,23,16];
+var totalAssetNew = [9,8];
+totalAsset.splice(2,0,9,8);
+function myFunction2(totalAsset) {
+	var sum = 0;
+	for (var i = 0 ; i<3; i++){
+		sum = sum + totalAsset[i]
+	}
+	return sum;
+}
+
+document.write(totalAsset);
+document.write('<br>');
+document.write(myFunction2(totalAsset));
+console.log(totalAsset);
+console.log(myFunction2(totalAsset));
+
+
+</script>
+
+</body>
